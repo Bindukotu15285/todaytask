@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+Name  :<input type="text" name="n1" id="n1"/><br>
+Gender:<br>
+<input type="radio" name="gen" id="gen" value="male">male</input>
+<input type="radio" name="gen" id="gen" value="female">female</input><br>
+Qualification : </br>
+<input type="radio" name="qul" id="qul" value="graduation">graduation</input>
+<input type="radio" name="qul" id="qul" value="post graduation">p.g</input>
+</br>
+Hobbies : 
+<select name="hbl" id="hb1">
+<option value="gardening">gardening</option>
+<option value="travelling">Travelling</option>
+<option value="music">music</option>
+<option value="watchingtv">Watching t.v</option>
+</select></br>
+<button onclick="pval()">submit</button>
+<script type="text/javascript">
+function pval()
+{
+var n=document.getElementById('n1');
+var m=n.value;
+var x1=document.querySelector('input[type=radio][name=gen]:checked');
+var y1=x1.value;
+
+var x=document.querySelector('input[type=radio][name=qul]:checked');
+var y=x.value;
+var a=document.querySelector("#hb1");
+var b=a.value;
+document.writeln("\n"+m);
+document.writeln("\n"+y1);
+document.writeln(y);
+document.writeln(b);
+}
+</script>
+</body>
+</html>
